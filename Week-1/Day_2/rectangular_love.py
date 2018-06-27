@@ -16,7 +16,7 @@ def find_rectangular_overlap(rect1, rect2):
         return {'left_x': None, 'bottom_y': None, 'width': None, 'height': None}
     return {'left_x': x1, 'bottom_y': y1, 'width': w, 'height': h}
 
-    return 0
+    
 
 # Tests
 
