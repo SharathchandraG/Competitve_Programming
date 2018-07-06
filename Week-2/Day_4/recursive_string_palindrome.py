@@ -7,18 +7,18 @@ def get_permutations_helper(lst):
         return [lst]
     l = []
     for i in range(len(lst)):
-        m = lst[i]
-        rlst = lst[:i] + lst[i+1:]
-        for t in get_permutations_helper(rlst):
-            l.append([m] + t)
+        x = lst[i]
+        newlist = lst[:i] + lst[i+1:]
+        for y in get_permutations_helper(newlist):
+            l.append([x] + y)
     return l
 def get_permutations(string):
 
     # Generate all permutations of the input string
-    perms = [''.join(perm) for perm in get_permutations_helper(list(string))]
-    if len(perms) == 0:
-        perms = [''] 
-    return set(perms)
+    permutations = [''.join(p) for p in get_permutations_helper(list(string))]
+    if len(permutations) == 0:
+        permutations = [''] 
+    return set(permutations)
 
 
 # Tests
